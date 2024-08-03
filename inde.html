@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>loader</title>
+</head>
+<style>
+     html,
+     body {
+          background-color: aquamarine;
+          box-sizing: border-box;
+     }
+
+
+     #loader {
+          height: 100%;
+          width: 100%;
+          background-color: black;
+          position: fixed;
+          z-index: 999;
+          color: white;
+          top: 0;
+          transition: all linear 1s;
+          display: flex;
+          align-items: center;
+          gap: 50px;
+          justify-content: center;
+     }
+
+     #loader h1 {
+          font-size: 4vw;
+          color: transparent;
+          background: linear-gradient(to right, orange, orangered);
+          -webkit-background-clip: text;
+          position: absolute;
+          opacity: 0;
+          animation-name: load;
+          animation-duration: 1s;
+          animation-delay: 1s;
+          animation-timing-function: linear;
+     }
+
+     #loader h1:nth-child(2) {
+          animation-delay: 2s;
+     }
+
+     #loader h1:nth-child(3) {
+          animation-delay: 3s;
+     }
+
+     #loader h1:nth-child(4) {
+          animation-delay: 4s;
+     }
+
+
+
+     @keyframes load {
+          0% {
+               opacity: 0;
+          }
+
+          10% {
+               opacity: 1;
+          }
+
+          90% {
+               opacity: 1;
+          }
+
+          100% {
+               opacity: 0;
+          }
+     }
+</style>
+
+<body>
+     <div id="loader">
+          <h1>Rana ji</h1>
+          <h1>Welcome </h1>
+          <h1>To </h1>
+          <h1>Yamraj Gaming 04</h1>
+     </div>
+</body>
+<script>
+     function lod() {
+          var loader = document.querySelector("#loader")
+          setTimeout(() => {
+               loader.style.top = "-100%"
+          }, 5000);
+     }
+     lod();
+     // function loaderAnimation() {
+     //      var loader = document.querySelector("#loader")
+     //      setTimeout(function () {
+     //           loader.style.top = " -100%"
+     //      }, 4000);
+     // }
+     // loaderAnimation()
+
+</script>
+
+</html>

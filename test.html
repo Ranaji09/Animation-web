@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>text</title>
+     <style>
+          * {
+               padding: 0;
+               margin: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               padding: 50px;
+          }
+
+          #hero1 {
+               height: 30vw;
+               border-radius: 50%;
+               filter: blur(10px);
+               width: 30vw;
+               background-color: orangered;
+               position: absolute;
+          }
+
+          #hero2 {
+               height: 30vw;
+               border-radius: 50%;
+               filter: blur(10px);
+               width: 30vw;
+               background-color: orangered;
+               animation-name: anim;
+               animation-direction: alternate;
+               animation-duration: 3s;
+               animation-timing-function: linear;
+               animation-iteration-count: infinite;
+          }
+
+          @keyframes anim {
+               from {
+                    transform: translate(-20%, -20%);
+               }
+
+               to {
+                    transform: translate(20%, 20%);
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div id="hero1"></div>
+     <div id="hero2"></div>
+</body>
+
+</html>
